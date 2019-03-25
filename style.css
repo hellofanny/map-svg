@@ -1,4 +1,22 @@
 .state {
     cursor: default;
     fill: #D3DEE2;
+    cursor: pointer;
+}
+
+.active {
+    fill: #00A591;
+    animation: filling 0.5s;
+}
+
+@keyframes filling {
+    0% {
+        opacity: 0.25;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1.0;
+    }
 }

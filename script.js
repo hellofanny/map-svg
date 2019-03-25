@@ -1,10 +1,18 @@
 
 
-var state = "PE";
+document.addEventListener('click', function (event) {
+    colorState(event)
+}, false);
 
-document.addEventListener('DOMContentLoaded', function (event) {
-    document.getElementById(state).style.fill = '#D45215';
-})
+function colorState(state) {
+    var clickedElement = event.target;
+    console.log(clickedElement);
 
-
-
+    if (clickedElement.classList.contains('active')) {
+        console.log("heree");
+        clickedElement.classList.remove("active");
+    }
+    else {
+        clickedElement.classList.add("active");
+    }
+}
